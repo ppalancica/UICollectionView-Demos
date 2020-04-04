@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
         
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    private let items = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    private let items = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,13 @@ class MainViewController: UIViewController {
             forCellWithReuseIdentifier: String(describing: CustomCollectionViewCell.self)
         )
         collectionView.dataSource = self
+        
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            let cellWidth = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
+            let cellHeight = cellWidth
+            layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+            layout.estimatedItemSize = .zero
+        }
     }
 }
 
@@ -49,6 +56,7 @@ extension MainViewController: UICollectionViewDataSource {
         let item = items[indexPath.item]
         
         cell.configureWithItem(item)
+        cell.backgroundColor = indexPath.item % 2 == 0 ? .red : .blue
         
         return cell
     }

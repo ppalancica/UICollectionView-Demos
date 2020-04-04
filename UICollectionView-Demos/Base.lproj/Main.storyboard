@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dsx-Fx-BAp">
-                                <rect key="frame" x="16" y="44" width="382" height="802"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TeH-uy-Re4">
                                     <size key="itemSize" width="50" height="50"/>
@@ -39,10 +39,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dsx-Fx-BAp" secondAttribute="bottom" constant="16" id="9yK-gf-96S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dsx-Fx-BAp" secondAttribute="bottom" id="9yK-gf-96S"/>
                             <constraint firstItem="dsx-Fx-BAp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bdv-ia-8h5"/>
-                            <constraint firstItem="dsx-Fx-BAp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gzx-xm-9zt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsx-Fx-BAp" secondAttribute="trailing" constant="16" id="tcD-42-8co"/>
+                            <constraint firstItem="dsx-Fx-BAp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gzx-xm-9zt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsx-Fx-BAp" secondAttribute="trailing" id="tcD-42-8co"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
