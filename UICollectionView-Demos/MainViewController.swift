@@ -11,7 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBAction private func programmaticallySameSizesButtonTouched() {
-        let programmaticSameSizeCellsVC = ProgrammaticSameSizeCellsVC(nibName: "ProgrammaticSameSizeCellsVC", bundle: nil)
+        let programmaticSameSizeCellsVC = ProgrammaticSameSizeCellsVC()
         navigationController?.pushViewController(programmaticSameSizeCellsVC, animated: true)
     }
     

@@ -10,18 +10,8 @@ import UIKit
 
 class ProgrammaticSameSizeCellsVC: UIViewController {
     
-    @IBOutlet private weak var collectionView: UICollectionView! {
-        didSet {
-            let layout = UICollectionViewFlowLayout()
-            // If we instead use the Layout setup in storyboard - it must be have `estimatedItemSize` set to None there.
-            // Leaving it to default / Automatic - would cause issues.
-            layout.estimatedItemSize = .zero
-            layout.minimumInteritemSpacing = 2
-            layout.minimumLineSpacing = 2
-            collectionView.collectionViewLayout = layout
-        }
-    }
-    
+    private lazy var collectionView: UICollectionView = createCollectionView()
+        
     private let items = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     
     override func viewDidLoad() {
@@ -31,6 +21,16 @@ class ProgrammaticSameSizeCellsVC: UIViewController {
     }
     
     func setupCollectionView() {
+        view.addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
+        ])
+        
         let nibName = String(describing: CustomCollectionViewCell.self)
         let nib = UINib(nibName: nibName, bundle: nil)
         collectionView.register(
@@ -39,9 +39,8 @@ class ProgrammaticSameSizeCellsVC: UIViewController {
         )
         collectionView.dataSource = self
 
-        // view.frame.size.width - this is not reliable here
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = constantCellSize(collectionViewWidth: UIScreen.main.bounds.size.width, layout: layout)
+        layout.itemSize = constantCellSize(collectionViewWidth: view.frame.size.width, layout: layout)
     }
 }
 
@@ -69,6 +68,21 @@ extension ProgrammaticSameSizeCellsVC: UICollectionViewDataSource {
 }
 
 extension ProgrammaticSameSizeCellsVC {
+    
+    private func createCollectionView() -> UICollectionView {
+        let layout = UICollectionViewFlowLayout()
+        // If we instead use the Layout setup in storyboard - it must be have `estimatedItemSize` set to None there.
+        // Leaving it to default / Automatic - would cause issues.
+        // Explictly setting it to .zero in code is optional
+        layout.estimatedItemSize = .zero
+        layout.minimumInteritemSpacing = 2
+        layout.minimumLineSpacing = 2
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .white
+        
+        return collectionView
+    }
     
     private func constantCellSize(collectionViewWidth: CGFloat, layout: UICollectionViewLayout) -> CGSize {
         guard let layout = layout as? UICollectionViewFlowLayout else { return .zero }

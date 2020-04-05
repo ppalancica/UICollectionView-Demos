@@ -16,7 +16,6 @@
 		B4067FB92439276800D12505 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4067FB72439276800D12505 /* CustomCollectionViewCell.swift */; };
 		B4067FBA2439276800D12505 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4067FB82439276800D12505 /* CustomCollectionViewCell.xib */; };
 		B4E0B9AE243A66F800E46E7F /* ProgrammaticSameSizeCellsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0B9AC243A66F800E46E7F /* ProgrammaticSameSizeCellsVC.swift */; };
-		B4E0B9AF243A66F800E46E7F /* ProgrammaticSameSizeCellsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E0B9AD243A66F800E46E7F /* ProgrammaticSameSizeCellsVC.xib */; };
 		B4E0B9B2243A6A2B00E46E7F /* ProgrammaticDifferentSizeCellsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0B9B0243A6A2B00E46E7F /* ProgrammaticDifferentSizeCellsVC.swift */; };
 		B4E0B9B3243A6A2B00E46E7F /* ProgrammaticDifferentSizeCellsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E0B9B1243A6A2B00E46E7F /* ProgrammaticDifferentSizeCellsVC.xib */; };
 /* End PBXBuildFile section */
@@ -33,7 +32,6 @@
 		B4067FB72439276800D12505 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		B4067FB82439276800D12505 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		B4E0B9AC243A66F800E46E7F /* ProgrammaticSameSizeCellsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticSameSizeCellsVC.swift; sourceTree = "<group>"; };
-		B4E0B9AD243A66F800E46E7F /* ProgrammaticSameSizeCellsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgrammaticSameSizeCellsVC.xib; sourceTree = "<group>"; };
 		B4E0B9B0243A6A2B00E46E7F /* ProgrammaticDifferentSizeCellsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticDifferentSizeCellsVC.swift; sourceTree = "<group>"; };
 		B4E0B9B1243A6A2B00E46E7F /* ProgrammaticDifferentSizeCellsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgrammaticDifferentSizeCellsVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +76,6 @@
 				B4067FB72439276800D12505 /* CustomCollectionViewCell.swift */,
 				B4067FB82439276800D12505 /* CustomCollectionViewCell.xib */,
 				B4E0B9AC243A66F800E46E7F /* ProgrammaticSameSizeCellsVC.swift */,
-				B4E0B9AD243A66F800E46E7F /* ProgrammaticSameSizeCellsVC.xib */,
 				B4E0B9B0243A6A2B00E46E7F /* ProgrammaticDifferentSizeCellsVC.swift */,
 				B4E0B9B1243A6A2B00E46E7F /* ProgrammaticDifferentSizeCellsVC.xib */,
 			);
@@ -148,7 +145,6 @@
 				B4067FBA2439276800D12505 /* CustomCollectionViewCell.xib in Resources */,
 				B4E0B9B3243A6A2B00E46E7F /* ProgrammaticDifferentSizeCellsVC.xib in Resources */,
 				B4067FA4243921BC00D12505 /* Main.storyboard in Resources */,
-				B4E0B9AF243A66F800E46E7F /* ProgrammaticSameSizeCellsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
